@@ -184,14 +184,17 @@ class MyComponent(commands.Component):
 
     
 
-    #!!! This connect you with the openAI. You should have defined your key in the terminal alreadt using export OPENAI_API_KEY="your key"
+    #!!! This connect you with the openAI. You should have defined your key in the terminal already using export OPENAI_API_KEY="your key"
     #!!! - Can change model, is currenlty using 4o mini since this doesnt need to be very powerful
     #!!! - Prompt can be completely modified to change the personality. I recommend this basic one, but anything can be added to tailor responses
+    # for example: eextremely short precise responses, funnny bot that makes jokes, ....
     #      to be in a specific tone/be extremly short. 
     #      EXAMPLE PROMPT: !ask whats 5+5? 
     #      RESPONSE:  5 + 5 equals 10!  Do you have any other questions?
     #!!! Token max to make sure the bot doesnt use too many tokens answering one simple question/request
     #!!! Exception should only happen if something is wrong with the AI account OR OpenAI is down
+    # IF you give this bot moderator in the channel, you can use normal /user timeout and /user ban to give it moderation power
+
 
 
 async def ask_llm(question: str) -> str:
