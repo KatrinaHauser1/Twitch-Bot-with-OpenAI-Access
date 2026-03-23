@@ -115,6 +115,10 @@ class MyComponent(commands.Component):
     async def hi(self, ctx: commands.Context) -> None:
         await ctx.reply(f"Hi {ctx.chatter}!")
 
+    @commands.command()
+    async def bye(self, ctx: commands.Context) -> None:
+        await ctx.reply(f"Bye {ctx.chatter}!")
+
     @commands.command() # moderation
     async def ban(self, ctx: commands.Context) -> None:
         await ctx.reply(f"/ban {ctx.chatter}")
