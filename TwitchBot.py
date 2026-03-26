@@ -119,6 +119,10 @@ class MyComponent(commands.Component):
     async def bye(self, ctx: commands.Context) -> None:
         await ctx.reply(f"Bye {ctx.chatter}!")
 
+    @commands.command()
+    async def warn(self, ctx: commands.Context) -> None:
+        await ctx.reply(f"/warn {ctx.chatter} Reason not given")
+        
     @commands.command() # moderation
     async def ban(self, ctx: commands.Context) -> None:
         await ctx.reply(f"/ban {ctx.chatter}")
